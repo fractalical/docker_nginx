@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+RUN curl -fsSL https://get.docker.com | sh
+
 COPY ./html/index.html /src/index.html
 
 WORKDIR ./src
