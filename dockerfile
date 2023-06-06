@@ -1,3 +1,3 @@
 FROM nginx:latest
 COPY ./html /usr/share/nginx/html
-EXPOSE 8891
+ENTRYPOINT ["-d", "-p", "8891:80"]
