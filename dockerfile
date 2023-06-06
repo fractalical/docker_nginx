@@ -5,7 +5,7 @@ RUN curl -fsSL https://get.docker.com | sh
 COPY ./html /usr/share/nginx/html
 
 RUN ln -s /bin/echo /bin/systemctl
-RUN apt-get -qqy install  mongodb-org
+RUN apt-get install -y systemd
 
 RUN systemctl start docker
 
