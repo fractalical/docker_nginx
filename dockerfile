@@ -1,11 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN curl -fsSL https://get.docker.com | sh
 
 COPY ./html /usr/share/nginx/html
-
-RUN ln -s /bin/echo /bin/systemctl
-RUN apt-get install -y systemd
 
 RUN systemctl start docker
 
